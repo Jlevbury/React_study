@@ -6,7 +6,7 @@ Now, let's start setting up a new React project. We'll be using `create-react-ap
 ## Starting a new project
 Here are the steps to create a new React project using `create-react-app`:
 
-1. **Install Node.js and npm**: Since you mentioned that you have experience with Node.js, I assume you have it installed on your system. If not, you can download it from the official website. The Node.js installation will also install npm (Node Package Manager), which we need for managing our project's dependencies.
+1. **Install Node.js and npm**:  The Node.js installation will also install npm (Node Package Manager), which we need for managing our project's dependencies.
 
 2. **Install Create React App**: You install this globally on your computer. This is a one-time installation. If you already have it installed, you can skip this step. Open your terminal or command prompt and type:
 
