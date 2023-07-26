@@ -626,6 +626,41 @@ In this tree:
 
 This component structure allows for separation of concerns. Each component is responsible for its own part of the UI, and data is passed down from parent components to child components through props. 
 
+## Destructuring Props
+
+In JavaScript ES6, destructuring assignment is a convenient way of extracting multiple values from data stored in objects and arrays. The same feature can be used in function parameters. 
+
+In React, you will commonly see destructuring used in the function signature of a functional component, where the props object is destructured. This is done for readability and ease of use of the props inside the component.
+
+Here's an example of a component without destructuring props:
+
+```jsx
+function Pizza(props) {
+  return (
+    <div>
+      <h2>{props.name}</h2>
+      <p>{props.ingredients}</p>
+    </div>
+  );
+}
+```
+
+And here's how you can destructure the props in the function signature:
+
+```jsx
+function Pizza({ name, ingredients }) {
+  return (
+    <div>
+      <h2>{name}</h2>
+      <p>{ingredients}</p>
+    </div>
+  );
+}
+```
+
+In the second example, `name` and `ingredients` are directly accessible, and you don't need to use `props.name` or `props.ingredients`.
+
+This can be particularly helpful when you have a lot of props, as it allows you to use the props directly without needing to repeat `props.` every time. It also makes it immediately clear which props the component expects when you or someone else revisits the component.
 
 
 
