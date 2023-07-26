@@ -598,5 +598,34 @@ In this example:
 
 This example demonstrates how you can use multiple returns and the ternary operator to cleanly handle different states of your props and render different UI accordingly. It also shows how you can nest the ternary operator inside your JSX to conditionally render different parts of your UI inline.
 
+## Pizza Project reference - Component Tree
+
+
+Here's how the component tree of your app would look:
+
+```
+App
+│
+├── Header
+│
+├── Menu
+│   └── Pizza (This component is rendered multiple times, once for each pizza in the data)
+│
+└── Footer
+    └── Order (This component is conditionally rendered)
+```
+
+In this tree:
+(ref index.js of Fast React Pizza Project)
+- `App` is the root component of your app. It renders the `Header`, `Menu`, and `Footer` components.
+- `Header` is a child of `App`. It does not render any other components.
+- `Menu` is a child of `App`. It maps over the `pizzaData` array and renders a `Pizza` component for each item.
+- `Pizza` is a child of `Menu`. It receives `pizzaObject` as a prop and uses this data to display details about each pizza. It does not render any other components.
+- `Footer` is a child of `App`. It conditionally renders the `Order` component based on the current time.
+- `Order` is a child of `Footer`. It does not render any other components.
+
+This component structure allows for separation of concerns. Each component is responsible for its own part of the UI, and data is passed down from parent components to child components through props. 
+
+
 
 
